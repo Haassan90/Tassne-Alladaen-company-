@@ -1,0 +1,330 @@
+/* =====================================================
+   GLOBAL THEME
+===================================================== */
+:root {
+    --bg-dark-1: #0f1c2e;
+    --bg-dark-2: #1e2f45;
+    --glass: rgba(255,255,255,0.06);
+    --card-white: #f4f6f8;
+
+    --green: #2ecc71;
+    --orange: #f39c12;
+    --red: #e74c3c;
+    --blue: #3498db;
+
+    --shadow-soft: 0 6px 18px rgba(0,0,0,0.35);
+    --shadow-strong: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* =====================================================
+   BODY  (BACKGROUND ONLY CHANGED)
+===================================================== */
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #2a3442, #0b1220 70%);
+    color: #ffffff;
+}
+
+/* =====================================================
+   COMMON
+===================================================== */
+.hidden { display:none; }
+
+/* =====================================================
+   LOGIN SCREEN (BACKGROUND ONLY CHANGED)
+===================================================== */
+#login-section {
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #0c1f33, #102a44);
+}
+
+.login-box {
+    width:360px;
+    padding:35px;
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border-radius:18px;
+    box-shadow: var(--shadow-strong);
+    text-align:center;
+}
+
+.login-box h1 {
+    margin-bottom:25px;
+    font-size:2em;
+    letter-spacing:1px;
+}
+
+.login-box input {
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:10px;
+    font-size:1em;
+}
+
+.login-box input:focus {
+    outline:none;
+    box-shadow:0 0 10px var(--blue);
+}
+
+.login-box button {
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background: var(--green);
+    color:#fff;
+    font-size:1.1em;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-box button:hover {
+    background:#27ae60;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+header {
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(6px);
+    padding:20px;
+    text-align:center;
+    box-shadow: var(--shadow-soft);
+}
+
+header h1 {
+    margin:0;
+    font-size:2.2em;
+    letter-spacing:1px;
+}
+
+header p {
+    margin-top:5px;
+    color:#cdd6e3;
+    font-size:1.1em;
+}
+
+/* =====================================================
+   LOCATIONS
+===================================================== */
+#locations {
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+/* =====================================================
+   LOCATION CARD
+===================================================== */
+.location-card {
+    background: var(--glass);
+    backdrop-filter: blur(8px);
+    border-radius:18px;
+    padding:20px;
+    box-shadow: var(--shadow-strong);
+}
+
+.location-card h2 {
+    margin:0 0 15px 0;
+    font-size:1.6em;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+    padding-bottom:10px;
+}
+
+/* =====================================================
+   MACHINES GRID
+===================================================== */
+.machines-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    gap:20px;
+}
+
+/* =====================================================
+   MACHINE CARD
+===================================================== */
+.machine-card {
+    background: var(--card-white);
+    color:#222;
+    border-radius:16px;
+    padding:16px;
+    box-shadow: var(--shadow-soft);
+    transition:0.35s;
+    position:relative;
+}
+
+.machine-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-strong);
+}
+
+.machine-card h3 {
+    margin:0 0 10px 0;
+    color:#1e2f45;
+}
+
+.machine-card p {
+    margin:4px 0;
+    font-size:0.9em;
+    font-weight:500;
+}
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+.status-badge {
+    padding:5px 14px;
+    border-radius:30px;
+    font-size:0.75em;
+    font-weight:bold;
+}
+
+.status-free { background: var(--green); color:#fff; }
+.status-running { background: var(--orange); color:#fff; }
+.status-stopped { background: var(--red); color:#fff; }
+
+/* =====================================================
+   JOB CARD
+===================================================== */
+.job-card {
+    background:#e9ecef;
+    border-radius:12px;
+    padding:12px;
+    margin-top:12px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+.job-card h4 {
+    margin:0 0 6px 0;
+    font-size:1em;
+    color:#1e2f45;
+}
+
+.job-card p {
+    margin:3px 0;
+    font-size:0.85em;
+}
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+.progress-container {
+    width:100%;
+    height:10px;
+    background:#cfd4da;
+    border-radius:10px;
+    overflow:hidden;
+    margin:10px 0;
+}
+
+.progress-bar {
+    height:100%;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    transition: width 0.5s ease;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.machine-card button {
+    margin-top:8px;
+    padding:7px 16px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    background:#34495e;
+    color:#fff;
+    transition:0.3s;
+}
+
+.machine-card button:hover {
+    background:#2c3e50;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+    margin-top:40px;
+    background: rgba(0,0,0,0.45);
+    padding:14px;
+    text-align:center;
+    font-size:0.9em;
+    color:#cdd6e3;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media(max-width:768px){
+    header h1 { font-size:1.7em; }
+    .machines-grid { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+}
+
+@media(max-width:480px){
+    #locations { padding:15px; }
+    header h1 { font-size:1.4em; }
+}
+
+/* ===== MACHINE STATUS COLORS ===== */
+
+.machine-card {
+    border-radius: 8px;
+    padding: 12px;
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.machine-free {
+    border-color: #9ca3af;
+    background: #f3f4f6;
+}
+
+.machine-running {
+    border-color: #16a34a;
+    background: #ecfdf5;
+}
+
+.machine-stopped {
+    border-color: #dc2626;
+    background: #fef2f2;
+}
+
+.status-free {
+    color: #6b7280;
+    font-weight: bold;
+}
+
+.status-running {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.status-stopped {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn.start { background:#19de6b; color:white; }
+.btn.pause { background:#0e8089; }
+.btn.stop  { background:#ff0000; color:white; }

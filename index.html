@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 🔒 IMPORTANT: prevent zoom / weird mobile reloads -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Tassne Alladaen – Live Production Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- ================= LOGIN ================= -->
+    <div id="login-section">
+        <div class="login-box">
+            <img
+                src="https://tacogroup.net/wp-content/uploads/2024/05/cropped-taco-Logo-300x73.png"
+                width="140"
+                alt="Taco Group Logo"
+            >
+
+            <br><br>
+
+            <!-- ⚠️ FORM ONLY FOR LOGIN -->
+            <form id="login-form" autocomplete="off">
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    autocomplete="off"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= DASHBOARD ================= -->
+    <div id="dashboard-section" class="hidden">
+
+        <!-- HEADER -->
+        <header>
+            <h1>Tassne Alladaen Company</h1>
+            <p id="dashboard-subtitle">
+                Live Production Monitoring (ERP Integrated)
+            </p>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- ⚙️ JS WILL RENDER ALL LOCATIONS & MACHINES HERE -->
+            <section id="locations"></section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>
+                © 2026 Tassne Alladaen Company |
+                ERPNext Live Production Dashboard
+            </p>
+        </footer>
+
+    </div>
+
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<!-- defer is IMPORTANT so DOM loads first -->
+<script src="script.js" defer></script>
+
+</body>
+</html>
